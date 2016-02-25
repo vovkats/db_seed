@@ -1,6 +1,9 @@
+$:.unshift("lib")
+require "db_seed/version"
+
 Gem::Specification.new do |s|
   s.name        = 'db_seed'
-  s.version     = '0.0.1'
+  s.version     = DbSeed::VERSION
   s.date        = '2016-02-25'
   s.summary     = "More than just db:migrate, db:migrate:seed"
   s.description = "Add ability to migrate data, separately from schema"

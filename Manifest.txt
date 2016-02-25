@@ -1,4 +1,26 @@
-# Foobar
+#
+# Metainfo and ties
+#
 
 lib/db_seed.rb
 lib/db_seed/version.rb
+lib/db_seed/railtie.rb
+
+#
+# Library
+#
+lib/db_seed/migrator.rb
+# lib/db_seed/migration.rb
+
+#
+# Task
+#
+lib/tasks/db_seed.rake
+
+#
+# Generator
+#
+
+lib/generators/seed/seed_generator.rb
+lib/generators/seed/USAGE
+lib/generators/seed/templates/seed.rb.erb
