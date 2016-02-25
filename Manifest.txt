@@ -1,0 +1,4 @@
+# Foobar
+
+lib/db_seed.rb
+lib/db_seed/version.rb
