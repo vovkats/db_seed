@@ -9,8 +9,7 @@ lib/db_seed/railtie.rb
 #
 # Library
 #
-lib/db_seed/migrator.rb
-# lib/db_seed/migration.rb
+lib/db_seed/migration.rb
 
 #
 # Task
