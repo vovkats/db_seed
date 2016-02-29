@@ -17,9 +17,13 @@ lib/db_seed/migration.rb
 lib/tasks/db_seed.rake
 
 #
-# Generator
+# Generators
 #
 
 lib/generators/seed/seed_generator.rb
 lib/generators/seed/USAGE
 lib/generators/seed/templates/seed.rb.erb
+
+lib/generators/seed/initializer/initializer_generator.rb
+lib/generators/seed/initializer/USAGE
+lib/generators/seed/initializer/templates/initializer.rb.erb

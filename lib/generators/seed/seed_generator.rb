@@ -2,7 +2,6 @@ class SeedGenerator < Rails::Generators::NamedBase
   source_root File.expand_path("../templates", __FILE__)
 
   def create_data_migration
-
     template "seed.rb.erb", "db/seed/#{next_migration_number}_#{file_name}.rb"
   end
 

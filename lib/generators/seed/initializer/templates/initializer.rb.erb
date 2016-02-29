@@ -1,0 +1,13 @@
+<%= Rails.application.class.parent_name %>::Application.config.assets[:db_seed] = {
+  # Set this to false to disable data-migration output
+  verbose: true,
+  # Change Logger.new parameter to output data-migration output into
+  #   another file
+  logger: Logger.new("log/db_seed.log").tap do |logger|
+    # Modify formatter for logger output
+    #
+    logger.formatter = -> (lvl, time, name, msg) {
+      "%s -- [%-5s]: %s\n" % [time.strftime("%Y.%m.%d %H:%M:%S"), lvl, msg]
+    }
+  end
+}

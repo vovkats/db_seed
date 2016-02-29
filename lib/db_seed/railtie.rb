@@ -7,6 +7,7 @@ module DbSeed
 
       generators do
         require "generators/seed/seed_generator"
+        require "generators/seed/initializer/initializer_generator"
       end
     end
   end
