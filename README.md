@@ -51,3 +51,6 @@ YourApp::Application.config.tap do |config|
   }
 end
 ```
+
+Чтобы ещё немного упростить процесс настройки, добавлен генератор `seed:initializer`,
+который добавляет файл `config/initializers/dbseed.rb` с таким же, примерно, кодом.
