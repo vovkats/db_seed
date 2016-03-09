@@ -9,7 +9,7 @@ class SeedGenerator < Rails::Generators::NamedBase
 
   def current_migration_number
     filename = Dir[File.join(Rails.root, "db/seed", "*.rb")].sort.last
-    File.basename(filename)[/^\d+/].to_i
+    File.basename(filename)[/^\d+/].to_i rescue 0
   end
 
   def next_migration_number
