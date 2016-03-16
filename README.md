@@ -45,6 +45,8 @@ YourApp::Application.config.tap do |config|
     "%s -- [%-5s]: %s\n" % [time.strftime("%Y.%m.%d %H:%M"), lvl, msg]
   }
 
+  logger.level = Logger::ERROR
+
   config.assets[:db_seed] = {
     verbose: true,         # true - отображать процесс выполнения
     logger: logger         # По умолчанию будет взят Logger.new("log/db_seed.log"), без форматтера

@@ -64,11 +64,15 @@ module DbSeed
     def announce(message)
       text = "  #{name}: #{message}"
       length = [0, 75 - text.length].max
-      write "== %s %s" % [text, "=" * length]
+      msg = "== %s %s" % [text, "=" * length]
+      write msg
+      logger.info(msg)
     end
 
     def say(message, subitem=false)
-      write "#{subitem ? "   ->" : "--"} #{message}"
+      msg = "#{subitem ? "   ->" : "--"} #{message}"
+      write msg
+      logger.info(msg)
     end
   end
 
