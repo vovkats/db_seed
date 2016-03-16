@@ -1,4 +1,4 @@
-class <%= file_name.pluralize.classify %> < DbSeed::Migration
+class <%= file_name.camelize %> < DbSeed::Migration
   def change
     # use ActiveRecord methods here
   end

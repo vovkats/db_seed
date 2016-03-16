@@ -182,5 +182,5 @@ module DbSeed
 
   class InvalidNameError < StandardError; end
   class DuplicateVersionError < StandardError; end
-  class DUplicateNameError < StandardError; end
+  class DuplicateNameError < StandardError; end
 end
