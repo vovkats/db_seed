@@ -172,7 +172,7 @@ module DbSeed
         end
 
         MigrationProxy.new(name.classify, version, filename)
-      end.sort(&:version)
+      end.sort_by(&:version)
     end
 
     def migrations_root
