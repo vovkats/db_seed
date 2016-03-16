@@ -171,7 +171,7 @@ module DbSeed
           raise InvalidNameError.new(filename)
         end
 
-        MigrationProxy.new(name.classify, version, filename)
+        MigrationProxy.new(name.camelize, version, filename)
       end.sort_by(&:version)
     end
 
