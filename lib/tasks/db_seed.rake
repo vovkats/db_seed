@@ -13,6 +13,25 @@ namespace :db do
 
   namespace :migrate do
     desc "Migrate database scheme, then apply data migrations"
-    task :seed => ["db:migrate", "db:seed:apply"]
+    task :seed => [:environment] do
+      at_exit { 
+        if $db_migrate_seed_completed 
+          puts '', 'Все миграции ВЫПОЛНЕНЫ УСПЕШНО'
+        else
+          puts '', '!!!','ВОЗНИКЛА ОШИБКА, миграции не были завершены'
+        end
+      }
+      puts "Запуск миграций схемы данных..."
+      puts ''
+      Rake::Task['db:migrate'].invoke
+      puts "Миграции схемы данных ВЫПОЛНЕНЫ УСПЕШНО"
+      puts ''
+      puts "Запуск миграций данных..."
+      puts ''
+      Rake::Task['db:seed:apply'].invoke
+      puts "Миграции данных ВЫПОЛНЕНЫ УСПЕШНО"
+      puts ''
+      $db_migrate_seed_completed = true
+    end
   end
 end

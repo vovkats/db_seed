@@ -35,7 +35,7 @@ module DbSeed
     end
 
     def self.config
-      ::Rails.configuration.assets[:db_seed] rescue {}
+      (::Rails.configuration.assets[:db_seed] rescue {}) || {}
     end
 
     def self.custom_logger
