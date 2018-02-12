@@ -114,7 +114,9 @@ module DbSeed
             end
           end
 
-          Arel::Table.new(DB_SEED__TABLE)
+          Class.new(ActiveRecord::Base) do
+            self.table_name = DB_SEED__TABLE
+          end.arel_table
         end
     end
 
